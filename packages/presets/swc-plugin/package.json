@@ -1,6 +1,6 @@
 {
   "name": "@victorandree/graphql-codegen-client-preset-swc-plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A SWC plugin for https://the-guild.dev/graphql/codegen/plugins/presets/preset-client. Forked to work with new Next.js versions and client components.",
   "license": "MIT",
   "bob": false,
