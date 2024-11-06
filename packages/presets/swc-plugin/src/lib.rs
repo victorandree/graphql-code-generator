@@ -8,7 +8,7 @@ use swc_core::{
         ast::*,
         atoms::atom,
         utils::quote_ident,
-        visit::{as_folder, FoldWith, VisitMut, VisitMutWith},
+        visit::{visit_mut_pass, VisitMut, VisitMutWith},
     },
     plugin::{
         errors::HANDLER, metadata::TransformPluginMetadataContextKind, plugin_transform,
@@ -251,5 +251,5 @@ pub fn process_transform(program: Program, metadata: TransformPluginProgramMetad
         gql_tag_name: plugin_config.gqlTagName,
     });
 
-    program.fold_with(&mut as_folder(visitor))
+    program.apply(&mut visit_mut_pass(visitor))
 }
