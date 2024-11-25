@@ -24,10 +24,10 @@ strip = "symbols"
 
 [dependencies]
 graphql-parser = "0.4.0"
-pathdiff = "0.2.1"
+pathdiff = "0.2.2"
 serde = "1"
-serde_json = "1.0.105"
-swc_core = { version = "3.0.2", features = ["ecma_plugin_transform", "ecma_visit", "ecma_utils", "ecma_parser", "common", "testing" ] }
+serde_json = "1.0.133"
+swc_core = { version = "6.0.2", features = ["ecma_plugin_transform", "ecma_visit", "ecma_utils", "ecma_parser", "common", "testing" ] }
 
 # .cargo/config defines few alias to build plugin.
 # cargo build-wasi generates wasm-wasi32 binary
