@@ -1,4 +1,9 @@
+> [!IMPORTANT]
 > This is an unsupported fork to make the plugin work with new versions of Next.js and "use client" directives. Use at your own peril.
+>
+> This version is 0.7.0. It's built with `swc_core` 16.2.2. To understand if this version is compatible with your project/runtime, check <https://plugins.swc.rs/versions/range>.
+>
+> @victorandree maintains this fork and releases new versions when I find it useful for myself. I typically bump `swc_core` in Cargo.toml, build the plugin and try it out with a sample Next.js project before releasing. I don't provide any support for other users.
 
 # `@victorandree/graphql-codegen-client-preset-swc-plugin`
 
