@@ -182,10 +182,11 @@ impl VisitMut for GraphQLVisitor {
 
         // Add import after any "use client" directive, since it must come before any other expression
         let mut index = 0;
-        if let ModuleItem::Stmt(Stmt::Expr(ExprStmt { expr, .. })) = &module.body[0] {
+
+        if let Some(ModuleItem::Stmt(Stmt::Expr(ExprStmt { expr, .. }))) = module.body.first() {
             if let Expr::Lit(Lit::Str(Str { value, .. })) = &**expr {
-                if atom!("use client") == *value {
-                    index = 1;
+                if matches!(value.as_ref(), "use client" | "use server") {
+                    index = 1; // Only one directive can exist, so we stop after the first match
                 }
             }
         }
