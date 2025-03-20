@@ -6,7 +6,6 @@ use swc_core::{
     common::Span,
     ecma::{
         ast::*,
-        atoms::atom,
         utils::quote_ident,
         visit::{visit_mut_pass, VisitMut, VisitMutWith},
     },
